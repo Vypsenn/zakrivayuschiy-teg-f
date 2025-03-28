@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
+  gap: 100px; 
 }
 
 .header {
@@ -256,12 +256,9 @@
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
-  padding: 28px 25px;
-  width: 24.2vw;
-  height: 20vh;
-  top: 384.5px;
-  left: 10px;
-  margin: 0 0 0 537px;
+  padding: 28px 29px;
+  max-inline-size: clamp(341px, 80%, 353px);
+  block-size: 191px;
 }
 
 dialog:not([open]) {
