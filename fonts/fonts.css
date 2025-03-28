@@ -15,4 +15,5 @@
   url('../fonts/Inter-Variable.woff2') format('woff2 supports variations'),
   url('../fonts/Inter-Variable.woff2') format('woff2-variations') ;
   font-weight: 100 900;
+  font-variation-settings: "opsz" 400, "opsz" 785;
 }
