@@ -77,7 +77,7 @@
   padding: 10px 15px;
   opacity: 0.5;
   font-variation-settings: "wght" 700;
-  
+  border-bottom: 2px solid black;
 }
 
 .section__img-leabl {
@@ -111,7 +111,7 @@
 .section__img {
   width: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center;  
 }
 
 .section__img-filter-blur {
@@ -151,6 +151,7 @@
   flex-direction: column;
   gap: var(--adaptive-gap);
   padding: 20px var(--adaptive-gap) 23px;
+  border-top: 2px solid black;
 }
 
 .section__text {
