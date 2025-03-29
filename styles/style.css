@@ -16,7 +16,7 @@
   min-block-size: 100dvb;
   font-family: var(--font-family), sans-serif;
   background-image: var(--bg-img);
-  background-size: cover;  
+  background-size: cover;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
@@ -73,10 +73,10 @@
   object-position: center;
 }
 .section__title {
-  font-weight: var(--font-weight-bold); 
+  font-weight: var(--font-weight-bold);
   line-height: 100%;
   vertical-align: middle;
-  padding: 5px 10px;  
+  padding: 5px 10px;
   font-size: 18px;
   font-variation-settings: "wght" 700;
   border-bottom: 2px solid black;
@@ -117,7 +117,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;  
+  object-position: center;
 }
 
 .section__img-filter-blur {
@@ -161,21 +161,21 @@
 }
 
 .section__text {
-  font-weight: var(--font-weight-normal);  
-  line-height: 21px;  
+  font-weight: var(--font-weight-normal);
+  line-height: 21px;
   justify-self: start;
   text-shadow: 1px 1px purple;
 }
 
 .button {
-  position: relative;  
-  line-height: 0.9; 
+  position: relative;
+  line-height: 0.9;
   border: 2px solid var(--Themes-mainColor, rgba(0, 0, 0, 1));
   font-family: var(--font-family-accent);
   font-size: 14px;
   cursor: pointer;
-  overflow: hidden;  
-  transition: 0.3s ease; 
+  overflow: hidden;
+  transition: 0.3s ease;
 }
 
 .section__button {
@@ -184,9 +184,9 @@
   gap: 5px;
 }
 
-.card__icon-button {  
-  transition: 0.3s ease; 
-  border: 2px solid transparent;   
+.card__icon-button {
+  transition: 0.3s ease;
+  border: 2px solid transparent;
   cursor: pointer;
   line-height: 0;
 }
@@ -197,11 +197,11 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--Themes-mainColor);
-  outline: none;  
+  outline: none;
 }
 
 .card__like-button {
-  width: 131px;   
+  width: 131px;
 }
 
 .button__text {
@@ -226,7 +226,7 @@
 }
 
 .button-save {
-  background-color: white;  
+  background-color: white;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -251,8 +251,8 @@
   mix-blend-mode: difference;
 }
 
-.button:hover::after { 
-  transform: translateX(0); 
+.button:hover::after {
+  transform: translateX(0);
 }
 
 .card__icon-button:focus {
@@ -261,8 +261,8 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--Themes-mainColor);
-  outline: none; 
-  box-shadow: none; 
+  outline: none;
+  box-shadow: none;
 }
 
 .dialog[open] {
@@ -278,9 +278,8 @@
   line-height: 150%;
   text-transform: uppercase;
   padding: 30px;
-  max-inline-size: clamp(341px, 80%, 353px); 
+  max-inline-size: clamp(341px, 80%, 353px);
 }
-
 
 .dialog__content {
   gap: 20px;
@@ -303,7 +302,7 @@ dialog::backdrop {
 }
 
 body:has(dialog[open]) {
-  overflow: hidden;    
+  overflow: hidden;
 }
 
 @media (width <= 375px) {
