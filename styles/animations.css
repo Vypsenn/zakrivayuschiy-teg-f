@@ -9,6 +9,31 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .contour {
   transition: fill 0.1s linear;
 }
@@ -61,26 +86,14 @@
   animation: opacity 0.3s ease-in 0.3s;
 }
 
-@keyframes scale {
-  from {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.25);
-  }
-  to {
-    transform: scale(1);
-  }
+.card__icon-button:active .contour {
+  fill: var(--color-contour);
 }
 
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.card__icon-button:active .main-body {
+  fill: var(--color-heart-main-body);
+}
+
+.card__icon-button:active .core {
+  fill: var(--color-heart-main-body);
 }
