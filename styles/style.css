@@ -16,18 +16,20 @@
   min-block-size: 100dvb;
   font-family: var(--font-family), sans-serif;
   background-image: var(--bg-img);
-  background-size: cover;
-  background-position: center;
+  background-size: cover;  
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 100px;
+  font-size: 18px;
+  color: black;
 }
 
 .header {
   background-color: white;
-  inline-size: 48.5vw;
+  inline-size: 100%;
+  max-inline-size: 700px;
   padding: 130px;
   display: flex;
   flex-direction: column;
@@ -57,7 +59,8 @@
 }
 
 .main {
-  inline-size: 48.5vw;
+  inline-size: 100%;
+  max-inline-size: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,18 +73,18 @@
   object-position: center;
 }
 .section__title {
-  font-weight: var(--font-weight-bold);
-  font-size: 18px;
+  font-weight: var(--font-weight-bold); 
   line-height: 100%;
   vertical-align: middle;
-  padding: 10px 15px;
-  opacity: 0.5;
+  padding: 5px 10px;  
+  font-size: 18px;
   font-variation-settings: "wght" 700;
   border-bottom: 2px solid black;
 }
 
 .section__img-leabl {
   position: relative;
+  aspect-ratio: 1/1;
 }
 
 .section__leabl {
@@ -95,6 +98,7 @@
   line-height: 100%;
   text-transform: uppercase;
   text-shadow: 1px 1px 0 var(--text-stroke);
+  opacity: 0.5;
 }
 
 @supports (
@@ -109,7 +113,9 @@
 }
 
 .section__img {
+  display: block;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;  
 }
@@ -150,21 +156,26 @@
   display: flex;
   flex-direction: column;
   gap: var(--adaptive-gap);
-  padding: 20px var(--adaptive-gap) 23px;
-  border-top: 2px solid black;
+  padding: 25px;
+  outline: 2px solid black;
 }
 
 .section__text {
-  font-weight: var(--font-weight-normal);
-  font-size: 18px;
+  font-weight: var(--font-weight-normal);  
   line-height: 21px;  
   justify-self: start;
   text-shadow: 1px 1px purple;
 }
 
 .button {
-  background-color: white;
+  position: relative;  
+  line-height: 0.9; 
   border: 2px solid var(--Themes-mainColor, rgba(0, 0, 0, 1));
+  font-family: var(--font-family-accent);
+  font-size: 14px;
+  cursor: pointer;
+  overflow: hidden;  
+  transition: 0.3s ease; 
 }
 
 .section__button {
@@ -173,9 +184,11 @@
   gap: 5px;
 }
 
-.card__icon-button {
-  border: none;
-  padding: 0;
+.card__icon-button {  
+  transition: 0.3s ease; 
+  border: 2px solid transparent;   
+  cursor: pointer;
+  line-height: 0;
 }
 
 .card__icon-button:focus {
@@ -184,15 +197,11 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--Themes-mainColor);
-  transition: 0.3s ease;
+  outline: none;  
 }
 
 .card__like-button {
-  width: 131px;
-  height: 40px;
-  position: relative;
-  overflow: hidden;
-  padding: 0;
+  width: 131px;   
 }
 
 .button__text {
@@ -217,34 +226,43 @@
 }
 
 .button-save {
-  position: relative;
-  overflow: hidden;
+  background-color: white;  
   display: flex;
   gap: 8px;
   align-items: center;
   justify-content: center;
-  padding: 20px 15px;
+  padding: 20px 0;
   inline-size: clamp(310px, 82%, 335px);
   margin-block-end: 100px;
 }
 
-.button-accent:focus {
+.button:focus {
   outline: none;
   box-shadow: 2px 2px 0 var(--color-accent);
 }
 
-.button-accent::after {
+.button::after {
   content: "";
   background-color: #fff;
   position: absolute;
   inset: 0;
   transform: translateX(-100%);
-}
-
-.button-accent:hover::after {
   transition: 0.5s ease-in-out;
   mix-blend-mode: difference;
-  transform: translateX(0);
+}
+
+.button:hover::after { 
+  transform: translateX(0); 
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--Themes-mainColor);
+  outline: none; 
+  box-shadow: none; 
 }
 
 .dialog[open] {
@@ -259,7 +277,7 @@
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
-  padding: 28px 29px;
+  padding: 30px;
   max-inline-size: clamp(341px, 80%, 353px); 
 }
 
@@ -317,5 +335,9 @@ body:has(dialog[open]) {
   .button__icon-floppy {
     width: 45px;
     height: 30px;
+  }
+
+  .dialog[open] {
+    padding: 30px 40px;
   }
 }
